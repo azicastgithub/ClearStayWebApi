@@ -33,4 +33,13 @@ namespace ClearStay.Domain.Enums
         AmcRenewal = 3,         // Paying for the yearly contract
         SafetyInspection = 4    // Government or fire safety audit
     }
+
+    public enum AccountType
+    {
+        Asset = 1,        // Bank accounts, Cash, Accounts Receivable
+        Liability = 2,    // Accounts Payable, Unearned Revenue
+        Equity = 3,       // Retained Earnings, Reserve Funds
+        Revenue = 4,      // Maintenance Income, Late Fee Income
+        Expense = 5       // Repair Costs, Staff Salaries
+    }
 }
