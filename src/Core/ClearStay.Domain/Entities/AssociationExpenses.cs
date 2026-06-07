@@ -30,6 +30,17 @@ namespace ClearStay.Domain.Entities
         [MaxLength(500)]
         public string Description { get; set; } = string.Empty;
 
+        public Guid? JournalEntryId { get; set; }
+
+        [ForeignKey(nameof(JournalEntryId))]
+        public JournalEntry? JournalEntry { get; set; }
+
+        [Required]
+        public Guid FinancialYearId { get; set; }
+
+        [ForeignKey(nameof(FinancialYearId))]
+        public FinancialYear FinancialYear { get; set; } = null!;
+
         public Guid? VendorId { get; set; }
 
         [ForeignKey(nameof(VendorId))]

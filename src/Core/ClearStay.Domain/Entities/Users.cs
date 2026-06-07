@@ -33,6 +33,6 @@ namespace ClearStay.Domain.Entities
         public bool IsActive { get; set; } = true;
 
         // 1-to-1 Navigation Property to the Business Profile
-        public Person? PersonProfile { get; set; }
+        public Resident? ResidentProfile { get; set; }
     }
 }

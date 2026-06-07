@@ -27,6 +27,17 @@ namespace ClearStay.Domain.Entities
         [Required]
         public DateTime DueDate { get; set; }
 
+        public Guid? JournalEntryId { get; set; }
+
+        [ForeignKey(nameof(JournalEntryId))]
+        public JournalEntry? JournalEntry { get; set; }
+
+        [Required]
+        public Guid FinancialYearId { get; set; }
+
+        [ForeignKey(nameof(FinancialYearId))]
+        public FinancialYear FinancialYear { get; set; } = null!;
+
         [Required]
         public bool IsPaid { get; set; }
 
